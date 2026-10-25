@@ -5,7 +5,7 @@ import requests
 
 app = Flask(__name__)
 
-DBAPP_URL = "http://local-git-pipeline-dbapp-1:8001"
+DBAPP_URL = "http://dbapp:8001"
 
 # Load trained model
 with open("model.pkl", "rb") as file:
