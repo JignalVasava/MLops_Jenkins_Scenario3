@@ -1,0 +1,13 @@
+
+services:
+  dbapp:
+    build: ./dbapp
+    ports:
+      - "8001:8001"
+
+  webapp:
+    build: ./webapp
+    ports:
+      - "8000:8000"
+    depends_on:
+      - dbapp

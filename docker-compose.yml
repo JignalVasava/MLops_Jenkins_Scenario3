@@ -1,0 +1,17 @@
+services:
+  dbapp:
+    build: ./dbapp
+    ports:
+      - "8001:8001"
+    volumes:
+      - iris_data_Jenkins:/app/instance
+
+  webapp:
+    build: ./webapp
+    ports:
+      - "8000:8000"
+    depends_on:
+      - dbapp
+
+volumes:
+  iris_data_Jenkins:
